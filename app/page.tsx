@@ -10,7 +10,7 @@ export default function Home() {
         {products.map((product) => (
           <Link
             key={product.id}
-            href={`/products/${product.id}`}
+            href={`/product/${product.id}`}
             className="bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition duration-300"
           >
             <div className="flex justify-center mb-4 h-48 relative">
