@@ -19,7 +19,7 @@ export default async function ProductPage({
     <div className="container mx-auto p-8 flex flex-col md:flex-row">
       <div className="md:w-1/2 mb-4 md:mb-0 md:mr-8">
         <Image
-          src={"/" + product.imageUrl}
+          src={product.imageUrl}
           alt={product.name}
           width={300}
           height={300}

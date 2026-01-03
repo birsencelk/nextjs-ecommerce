@@ -15,7 +15,7 @@ export default function Home() {
           >
             <div className="flex justify-center mb-4 h-48 relative">
               <Image
-                src={"/" + product.imageUrl}
+                src={product.imageUrl}
                 alt="Product image"
                 fill
                 className="object-cover rounded-md"
