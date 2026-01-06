@@ -10,7 +10,7 @@ export async function GET(
   { params }: { params: Params }
 ) {
   const { db } = await connectToDb();
-  const productId = await params.id;
+  const { id: productId } = await params;
 
   const product = await db.collection("products").findOne({ id: productId });
 

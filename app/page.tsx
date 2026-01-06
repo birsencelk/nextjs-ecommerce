@@ -1,8 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import { products } from "./product-data";
 
-export default function Home() {
+export default async function Home() {
+  const response = await fetch("http://localhost:3000/api/products");
+  const products = await response.json();
+
   return (
     <div className="container mx-auto p-8">
       <h1 className="text-4xl font-bold mb-8">Products</h1>
