@@ -15,11 +15,6 @@ export default function Navbar() {
               Shopping Cart
             </Link>
           </li>
-          <li>
-            <Link href="/checkout" className="text-gray-700 hover:text-black">
-              Checkout
-            </Link>
-          </li>
         </ul>
       </div>
     </nav>
