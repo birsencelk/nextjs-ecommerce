@@ -10,8 +10,8 @@ export async function GET(
   { params }: { params: Params }
 ) {
   const { db } = await connectToDb();
+  const { id: userId } = await params;
 
-  const userId = params.id;
   const userCart = await db.collection("carts").findOne({ userId });
 
   if (!userCart) {
