@@ -7,7 +7,9 @@ export default async function ProductPage({
   params: { id: string };
 }) {
   const { id } = await params;
-  const response = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/${id}`);
+  const response = await fetch(
+    `${process.env.NEXT_PUBLIC_SITE_URL}/api/products/${id}`
+  );
   const product = await response.json();
 
   if (!product) {
