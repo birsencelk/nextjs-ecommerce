@@ -1,6 +1,8 @@
 import { Product } from "./product-data";
 import ProductList from "./ProductList";
 
+export const dynamic = "force-dynamic";
+
 export default async function Home() {
   const productsRes = await fetch(
     `${process.env.NEXT_PUBLIC_SITE_URL}/api/products`

@@ -1,6 +1,8 @@
 import Image from "next/image";
 import NotFound from "@/app/not-found";
 
+export const dynamic = "force-dynamic";
+
 export default async function ProductPage({
   params,
 }: {
