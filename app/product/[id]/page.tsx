@@ -1,6 +1,5 @@
 import Image from "next/image";
 import NotFound from "@/app/not-found";
-import { products } from "@/app/product-data";
 
 export default async function ProductPage({
   params,
@@ -8,8 +7,8 @@ export default async function ProductPage({
   params: { id: string };
 }) {
   const { id } = await params;
-
-  const product = products.find((p) => p.id === id);
+  const response = await fetch(`http://localhost:3000/api/products/${id}`);
+  const product = await response.json();
 
   if (!product) {
     return <NotFound />;
